@@ -12,20 +12,30 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   backend:
-    build: ./backend/Altairis.Api
+    build:
+      context: ./backend/Altairis.Api
+      dockerfile: Dockerfile
     container_name: altairis_backend
     ports:
       - "5000:8080"
     depends_on:
       - db
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=altairis_db;Username=admin;Password=password123
+      - ASPNETCORE_ENVIRONMENT=Development
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     container_name: altairis_frontend
     ports:
       - "3000:3000"
     depends_on:
       - backend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000
+      - INTERNAL_API_URL=http://backend:8080
 
 volumes:
   postgres_data:
