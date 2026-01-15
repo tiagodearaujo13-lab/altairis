@@ -55,29 +55,4 @@ Motor de Reservas: Criação de reservas reais com validação de datas e dados 
 
 docker-compose.yml - Orquestração dos serviços.
 
-Desenvolvido por Tiago Araújo.
-
-
----
-
-### 📝 Como adicionar ao GitHub
-
-Tens duas formas de fazer isto:
-
-**Opção A: Pelo Site do GitHub (Mais Fácil)**
-1.  Vai ao teu repositório no GitHub.
-2.  Clica no botão verde **"Add a README"** (que aparece na tua imagem).
-3.  Cola o texto que te dei acima.
-4.  Clica em **"Commit changes..."** no canto superior direito.
-
-**Opção B: Pelo teu Terminal (Como um Pro)**
-1.  Na pasta raiz do projeto (`altairis-backoffice`), cria um ficheiro chamado `README.md`.
-2.  Cola o texto lá dentro e salva.
-3.  No terminal, corre:
-    ```bash
-    git add README.md
-    git commit -m "docs: Adiciona documentação do projeto"
-    git push
-    ```
-
-Diz-me quando estiver feito para eu te ajudar a escrever o **email final** para a empresa! ✉️
+Desenvolvido por Tiago de Araújo Francisco
