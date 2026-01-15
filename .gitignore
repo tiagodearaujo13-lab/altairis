@@ -1,0 +1,22 @@
+# Dependências do Node (Frontend)
+node_modules/
+.next/
+out/
+build/
+
+# Compilados do .NET (Backend)
+bin/
+obj/
+*.user
+
+# Base de Dados (para não subir os dados do teu PC)
+postgres_data/
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Logs e variáveis de ambiente
+*.log
+.env
+.env.local

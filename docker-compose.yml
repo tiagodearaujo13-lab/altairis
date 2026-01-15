@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:15
+    container_name: altairis_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: altairis_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend/Altairis.Api
+    container_name: altairis_backend
+    ports:
+      - "5000:8080"
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: altairis_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
